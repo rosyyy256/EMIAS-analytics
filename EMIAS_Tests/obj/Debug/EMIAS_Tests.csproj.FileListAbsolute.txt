@@ -1,0 +1,12 @@
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS_Tests\bin\Debug\EMIAS_Tests.dll
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS_Tests\bin\Debug\EMIAS_Tests.pdb
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS_Tests\bin\Debug\EMIAS_anal_ytics.exe
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS_Tests\bin\Debug\nunit.framework.dll
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS_Tests\bin\Debug\EMIAS_anal_ytics.pdb
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS_Tests\bin\Debug\EMIAS_anal_ytics.exe.config
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS_Tests\bin\Debug\nunit.framework.xml
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS_Tests\obj\Debug\EMIAS_Tests.csproj.AssemblyReference.cache
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS_Tests\obj\Debug\EMIAS_Tests.csproj.CoreCompileInputs.cache
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS_Tests\obj\Debug\EMIAS_Tests.csproj.CopyComplete
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS_Tests\obj\Debug\EMIAS_Tests.dll
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS_Tests\obj\Debug\EMIAS_Tests.pdb

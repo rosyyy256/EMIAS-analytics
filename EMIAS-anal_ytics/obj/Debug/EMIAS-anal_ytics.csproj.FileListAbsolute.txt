@@ -1,0 +1,16 @@
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\bin\Debug\EMIAS_anal_ytics.exe.config
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\bin\Debug\EMIAS_anal_ytics.exe
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\bin\Debug\EMIAS_anal_ytics.pdb
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\obj\Debug\EMIAS-anal_ytics.csproj.AssemblyReference.cache
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\obj\Debug\EMIAS-anal_ytics.csproj.SuggestedBindingRedirects.cache
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\obj\Debug\MainWindow.g.cs
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\obj\Debug\App.g.cs
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\obj\Debug\EMIAS_anal_ytics_MarkupCompile.cache
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\obj\Debug\EMIAS_anal_ytics_MarkupCompile.lref
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\obj\Debug\MainWindow.baml
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\obj\Debug\EMIAS_anal_ytics.g.resources
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\obj\Debug\EMIAS_anal_ytics.Properties.Resources.resources
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\obj\Debug\EMIAS-anal_ytics.csproj.GenerateResource.cache
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\obj\Debug\EMIAS-anal_ytics.csproj.CoreCompileInputs.cache
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\obj\Debug\EMIAS_anal_ytics.exe
+C:\Users\rosyyy\Desktop\local projects\EMIAS-anal_ytics\EMIAS-anal_ytics\obj\Debug\EMIAS_anal_ytics.pdb

@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EMIAS_anal_ytics"
         mc:Ignorable="d"
-        Title="EMIAS-anal_ytics" MinHeight="540" MinWidth="810"
-        MaxHeight="600" MaxWidth="1000"
+        Title="EMIAS-anal_ytics" MinHeight="640" MinWidth="1000"
+        MaxHeight="640" MaxWidth="1000"
         Background="#A9CBD9">
     <Window.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
@@ -168,7 +168,8 @@
                             Foreground="#3E3E3E"
                             BorderThickness="0"
                             Style="{DynamicResource ButtonStyle1}"
-                            x:Name="PreviousDate"
+                            x:Name="PreviousDateButton"
+                            Click="SwitchToPreviousDate"
                             Content="&lt;"/>
                     <Button Padding="20 0 20 0"
                             Height="25"
@@ -184,7 +185,8 @@
                             Foreground="#3E3E3E"
                             BorderThickness="0"
                             Style="{DynamicResource ButtonStyle1}"
-                            x:Name="NextDate"
+                            x:Name="NextDateButton"
+                            Click="SwitchToNextDate"
                             Content="&gt;"/>
                 </WrapPanel>
                 <Border CornerRadius="5"
@@ -192,12 +194,26 @@
                         Width="915"
                         Background="#F2F2F2"
                         Padding="5">
-                    <ListBox
-                        x:Name="SemdList"
-                        BorderThickness="0"
-                        Background="#F2F2F2"
-                        Style="{DynamicResource ListBoxStyle1}"/>
+                    <WrapPanel>
+                        <ListBox
+                            x:Name="SemdList"
+                            BorderThickness="0"
+                            Background="#F2F2F2"
+                            Style="{DynamicResource ListBoxStyle1}"
+                            MouseDoubleClick="PrintDoctorsList"/>
+                    </WrapPanel>
                 </Border>
+                <Button Content="Назад"
+                        HorizontalAlignment="Left"
+                        Margin="2 15 0 0"
+                        Width="70"
+                        Height="25"
+                        Background="#F2F2F2"
+                        Foreground="#3E3E3E"
+                        BorderThickness="0"
+                        x:Name="BackButton"
+                        Click="Back"
+                        Style="{DynamicResource ButtonStyle1}"/>
             </StackPanel>
         </Border>
     </Grid>

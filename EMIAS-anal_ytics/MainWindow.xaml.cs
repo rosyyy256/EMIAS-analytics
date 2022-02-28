@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows;
 using Microsoft.Win32;
 
@@ -6,7 +7,7 @@ namespace EMIAS_anal_ytics
 {
     public partial class MainWindow
     {
-        private Node _node;
+        private Tree _tree;
         
         public MainWindow()
         {
@@ -15,7 +16,7 @@ namespace EMIAS_anal_ytics
         
         private void OverviewButtonClick(object sender, RoutedEventArgs e)
         {
-            var openFileDialog = new OpenFileDialog();
+            var openFileDialog = new OpenFileDialog(); 
             if (openFileDialog.ShowDialog() == true)
             {
                 FilePath.Text = openFileDialog.FileName;
@@ -24,18 +25,40 @@ namespace EMIAS_anal_ytics
 
         private void StartButtonClick(object sender, RoutedEventArgs e)
         {
-            SemdList.Items.Clear();
-            _node = DataHandler.GetAssociativeTreeFromCsv(FilePath.Text);
-            PrintDepartmentsList(DataHandler.GetAssociativeTreeFromCsv(FilePath.Text).Dates.First().Key);
+            // SemdList.Items.Clear();
+            // _tree = DataHandler.GetAssociativeTreeFromCsv(FilePath.Text);
+            // PrintDepartmentsList(DataHandler.GetAssociativeTreeFromCsv(FilePath.Text).Dates.First().Key);
         }
 
-        private void PrintDepartmentsList(string date)
+        private void PrintDepartmentsList(DateTime date)
         {
-            Date.Content = date;
-            foreach (var department in _node.Dates[date])
+            SemdList.Items.Clear();
+            NextDateButton.IsEnabled = _tree.Dates.ContainsKey(date.AddDays(1));
+            PreviousDateButton.IsEnabled = _tree.Dates.ContainsKey(date.AddDays(-1));
+            Date.Content = $"{date.Day}.{date.Month}.{date.Year}";
+            foreach (var department in _tree.Dates[date])
             {
                 SemdList.Items.Add($"{department.Name} - {department.SemdCount}");
             }
+        }
+
+        private void PrintDoctorsList(object sender, RoutedEventArgs e)
+        {
+            var department = _tree.Dates[DateTime.Parse(Date.Content.ToString())][SemdList.SelectedIndex];
+            SemdList.Items.Clear(); 
+            foreach (var doctor in department.DoctorsList)
+            {
+                SemdList.Items.Add($"{doctor.Name} - {doctor.SemdCount}");
+            }
+        }
+
+        private void SwitchToNextDate(object sender, RoutedEventArgs e) => PrintDepartmentsList(DateTime.Parse(Date.Content.ToString()).AddDays(1));
+
+        private void SwitchToPreviousDate(object sender, RoutedEventArgs e) => PrintDepartmentsList(DateTime.Parse(Date.Content.ToString()).AddDays(-1));
+
+        private void Back(object s, RoutedEventArgs e)
+        {
+            PrintDepartmentsList(DateTime.Parse(Date.Content.ToString()));
         }
     }
 }

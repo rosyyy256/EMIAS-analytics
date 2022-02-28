@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Lifetime;
 using System.Text;
 
 namespace EMIAS_anal_ytics
 {
     public static class DataHandler
     {
-        public static Node GetAssociativeTreeFromCsv(string filePath)
+        public static Tree GetAssociativeTreeFromCsv(string filePath)
         {
             var parsedList = GetParsedList(filePath);
             if (!parsedList.Any()) return null;
 
-            var res = new Node();
+            var res = new Tree();
             
             foreach (var row in parsedList)
             {
@@ -40,6 +41,7 @@ namespace EMIAS_anal_ytics
                     ));
             }
 
+            sr.Close();
             if (parsed.Any()) parsed.RemoveAt(0);
             return parsed.ToList();
         }
@@ -59,35 +61,31 @@ namespace EMIAS_anal_ytics
         }
     }
     
-    public class Node
+    public class Tree
     {
-        public Node Head;
-        public Node Previous;
-        public Node Next;
-        public Dictionary<string, List<Department>> Dates;
+        public Dictionary<DateTime, List<Department>> Dates;
         public int SemdCount;
 
-        public Node()
+        public Tree()
         {
-            Dates = new Dictionary<string, List<Department>>();
+            Dates = new Dictionary<DateTime, List<Department>>();
             SemdCount = 0;
         }
 
         public void Push(Row row)
         {
-            if (!Dates.ContainsKey(row.Date))
+            if (!Dates.ContainsKey(DateTime.Parse(row.Date)))
             {
-                Dates[row.Date] = new List<Department>();
-                Dates[row.Date].Add(new Department(row.Department));
+                Dates[DateTime.Parse(row.Date)] = new List<Department> {new Department(row.Department)};
             }
             else
             {
-                if (!Dates[row.Date].Any(dep => dep.Name == row.Department))
+                if (!Dates[DateTime.Parse(row.Date)].Any(dep => dep.Name == row.Department))
                 {
-                    Dates[row.Date].Add(new Department(row.Department));
+                    Dates[DateTime.Parse(row.Date)].Add(new Department(row.Department));
                 }
             }
-            Dates[row.Date].Find(dep => dep.Name == row.Department).Push(row.Doctor);
+            Dates[DateTime.Parse(row.Date)].Find(dep => dep.Name == row.Department).Push(row.Doctor);
             SemdCount++;
         }
 
@@ -136,11 +134,5 @@ namespace EMIAS_anal_ytics
 
             SemdCount++;
         }
-    }
-
-    public class Date
-    {
-        public string DateTime;
-        public List<Department> DepartmentsList = new List<Department>();
     }
 }

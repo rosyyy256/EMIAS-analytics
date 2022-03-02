@@ -46,9 +46,9 @@
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\EMIAS-anal_ytics\EMIAS-anal_ytics.csproj">
+      <ProjectReference Include="..\EMIAS-analytics\EMIAS-analytics.csproj">
         <Project>{1a13b987-982f-414a-9b67-53abeda0ca72}</Project>
-        <Name>EMIAS-anal_ytics</Name>
+        <Name>EMIAS-analytics</Name>
       </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using EMIAS_anal_ytics;
+using EMIAS_analytics;
 using NUnit.Framework;
 
 namespace EMIAS_Tests

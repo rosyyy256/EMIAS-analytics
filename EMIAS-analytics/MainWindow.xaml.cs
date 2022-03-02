@@ -3,7 +3,7 @@ using System.Linq;
 using System.Windows;
 using Microsoft.Win32;
 
-namespace EMIAS_anal_ytics
+namespace EMIAS_analytics
 {
     public partial class MainWindow
     {
@@ -25,9 +25,10 @@ namespace EMIAS_anal_ytics
 
         private void StartButtonClick(object sender, RoutedEventArgs e)
         {
-            // SemdList.Items.Clear();
-            // _tree = DataHandler.GetAssociativeTreeFromCsv(FilePath.Text);
-            // PrintDepartmentsList(DataHandler.GetAssociativeTreeFromCsv(FilePath.Text).Dates.First().Key);
+            if (string.IsNullOrEmpty(FilePath.Text)) return;
+            SemdList.Items.Clear();
+            _tree = DataHandler.GetAssociativeTreeFromCsv(FilePath.Text);
+            PrintDepartmentsList(DataHandler.GetAssociativeTreeFromCsv(FilePath.Text).Dates.First().Key);
         }
 
         private void PrintDepartmentsList(DateTime date)

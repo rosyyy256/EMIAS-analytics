@@ -1,4 +1,4 @@
-﻿namespace EMIAS_anal_ytics
+﻿namespace EMIAS_analytics
 {
     /// <summary>
     /// Interaction logic for App.xaml

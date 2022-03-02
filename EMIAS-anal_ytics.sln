@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMIAS-anal_ytics", "EMIAS-anal_ytics\EMIAS-anal_ytics.csproj", "{1A13B987-982F-414A-9B67-53ABEDA0CA72}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMIAS-analytics", "EMIAS-analytics\EMIAS-analytics.csproj", "{1A13B987-982F-414A-9B67-53ABEDA0CA72}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMIAS_Tests", "EMIAS_Tests\EMIAS_Tests.csproj", "{0A660DFD-F647-4FE9-854F-2555C1052660}"
 EndProject

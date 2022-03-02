@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EMIAS_anal_ytics.Properties
+namespace EMIAS_analytics.Properties
 {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.

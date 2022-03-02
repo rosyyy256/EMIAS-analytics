@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.Remoting.Lifetime;
 using System.Text;
 
-namespace EMIAS_anal_ytics
+namespace EMIAS_analytics
 {
     public static class DataHandler
     {
@@ -64,12 +63,10 @@ namespace EMIAS_anal_ytics
     public class Tree
     {
         public Dictionary<DateTime, List<Department>> Dates;
-        public int SemdCount;
 
         public Tree()
         {
             Dates = new Dictionary<DateTime, List<Department>>();
-            SemdCount = 0;
         }
 
         public void Push(Row row)
@@ -80,13 +77,12 @@ namespace EMIAS_anal_ytics
             }
             else
             {
-                if (!Dates[DateTime.Parse(row.Date)].Any(dep => dep.Name == row.Department))
+                if (Dates[DateTime.Parse(row.Date)].All(dep => dep.Name != row.Department))
                 {
                     Dates[DateTime.Parse(row.Date)].Add(new Department(row.Department));
                 }
             }
             Dates[DateTime.Parse(row.Date)].Find(dep => dep.Name == row.Department).Push(row.Doctor);
-            SemdCount++;
         }
 
         public void Sort()
